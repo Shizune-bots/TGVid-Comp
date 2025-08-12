@@ -65,7 +65,7 @@ RUN apt-get clean && \
 
 # Copy your application files
 COPY . .
-RUN pip3 install -r requirements.txt
+RUN pip3 install --upgrade --no-cache-dir -r requirements.txt
 
 EXPOSE 8000
 CMD ["bash","run.sh"]
